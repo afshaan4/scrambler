@@ -12,6 +12,7 @@
 
 #added features :
 '''
+upgraded from random rand int to Os.urandom
 Added security by starting the program only after verification by password
  if the password is wrong it exits with an error
 Now verification by password is required to decrypt files
