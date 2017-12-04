@@ -4,4 +4,4 @@ Unless otherwise specified, everything in this repository is covered by the foll
 
 Scarmbler is licenced under a Creative Commons Attribution 4.0 International License.
 
-Based on a work at https://github.com/raspberrypilearning/secret-agent-chat
+Based on a work by the  raspberry pi foundation which can be found here: https://github.com/raspberrypilearning/secret-agent-chat

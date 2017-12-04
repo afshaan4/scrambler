@@ -1,3 +1,10 @@
+#Scrambler
+
+
+
+#This program is based on a program by the raspberry pi foundation
+#which can gbe found here: https://github.com/raspberrypilearning/secret-agent-chat
+
 #THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
 #OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 #FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -7,14 +14,14 @@
 #THE SOFTWARE.
 
 #description
-#this is a encrtyption decryption program
+#this is a encryption/ decryption program
 #it uses the OTP (one-time pad) method to encrypt & decrypt
 
 #added features :
 '''
 upgraded from random rand int to Os.urandom
 Added security by starting the program only after verification by password
- if the password is wrong it exits with an error
+if the password is wrong it exits with an error
 Now verification by password is required to decrypt files
 '''
 
