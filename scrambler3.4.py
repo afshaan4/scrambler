@@ -3,7 +3,7 @@
 
 
 #This program is based on a program by the raspberry pi foundation
-#which can gbe found here: https://github.com/raspberrypilearning/secret-agent-chat
+#which can be found here: https://github.com/raspberrypilearning/secret-agent-chat
 
 #THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
 #OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
