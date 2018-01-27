@@ -5,4 +5,4 @@ My improved version of a encryption decryption program written by the raspberry 
 
 * Install python3
 * Clone this repository: `git clone https://github.com/afshaan4/scrambler.git`
-* Run `python3 scrambler3.4.py` from the same folder as the program
+* Run `python3 scrambler.py` from the same folder as the program
