@@ -17,14 +17,6 @@
 #this is a encryption/ decryption program
 #it uses the OTP (one-time pad) method to encrypt & decrypt
 
-#added features :
-'''
-upgraded from random rand int to Os.urandom
-Added security by starting the program only after verification by password
-if the password is wrong it exits with an error
-Now verification by password is required to decrypt files
-'''
-
 import random #import the random generator
 
 #establish the alphabet
