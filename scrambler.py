@@ -13,16 +13,12 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 #THE SOFTWARE.
 
-#description
-#this is a encryption/ decryption program
-#it uses the OTP (one-time pad) method to encrypt & decrypt
-
 import random #import the random generator
 
 #establish the alphabet
 ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
 
-#save yoursel from typing out a full sentence everytime you want to generate a random number
+#save yourself from typing out a full sentence everytime you want to generate a random number
 r = random.SystemRandom()
 
 #the key range
