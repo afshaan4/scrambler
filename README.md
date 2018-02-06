@@ -1,5 +1,5 @@
 # Scrambler
-My improved version of a encryption decryption program written by the raspberry pi foundation which can be found [here](https://www.raspberrypi.org/learning/secret-agent-chat/)
+My improved version of a encryption decryption program written by the raspberry pi foundation which can be found [here](https://github.com/raspberrypilearning/secret-agent-chat)
 
 It only encrypts plaintext files, and only stuff that is written in the english alphabet.
 
