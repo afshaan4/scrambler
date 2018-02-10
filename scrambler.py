@@ -77,6 +77,7 @@ def decrypt(ciphertext, sheet):
             plaintext += ALPHABET[decrypted]
     return plaintext
 
+
 #startup menu (this is the UI that the user interacts with)
 def menu():
     choices = ['1', '2', '3', '4']
