@@ -1,61 +1,59 @@
-#Scrambler
+# Scrambler
+# A plaintext file encryption program.
 
+# This program is based on a program by the raspberry pi foundation
+# which can be found here: https://github.com/raspberrypilearning/secret-agent-chat
 
+# THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+# OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
 
-#This program is based on a program by the raspberry pi foundation
-#which can be found here: https://github.com/raspberrypilearning/secret-agent-chat
+import random
 
-#THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-#OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-#THE SOFTWARE.
+ALPHABET = 'abcdefghijklmnopqrstuvwxyz'  # establish the alphabet
 
-import random #import the random generator
-
-#establish the alphabet
-ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
-
-#save yourself from typing out a full sentence everytime you want to generate a random number
+# save yourself from typing out a full sentence for random
 r = random.SystemRandom()
 
-#the key range
+# the key range
 keyrange = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
 
-#OTP generator
-#generates files with the OTPs in it
-#makes the otp & puts it in the files
+# OTP generator
+# generates files with the OTPs in it
+# makes the otp & puts it in the files
 def generate_otp(sheets, length):
     for sheet in range(sheets):
         with open("otp" + str(sheet) + ".txt","w") as f:
             for i in range(length):
                 f.write(str(r.choice(keyrange))+"\n")
 
-#reads the otp file specified
+# reads the otp file specified
 def load_sheet(filename):
     with open(filename, "r") as f:
         contents = f.read().splitlines()
     return contents
 
-#reads user input & formats it as lowercase(for simplicity)
+# reads user input & formats it as lowercase(for simplicity)
 def get_plain_text():
     plain_text = input('Please type your message ')
     return plain_text.lower()
 
-#loads the encrypted messages
+# loads the encrypted messages
 def load_file(filename):
     with open(filename, "r") as f:
         contents = f.read()
     return contents
 
-#saves encrypted stuff as a file
+# saves encrypted stuff as a file
 def save_file(filename, data):
     with open(filename, 'w') as f:
         f.write(data)
 
-#encrypts stuff
+# encrypts stuff
 def encrypt(plaintext, sheet):
     ciphertext = ''
     for position, character in enumerate(plaintext):
@@ -66,7 +64,7 @@ def encrypt(plaintext, sheet):
             ciphertext += ALPHABET[encrypted]
     return ciphertext
 
-#decrypts stuff
+# decrypts stuff
 def decrypt(ciphertext, sheet):
     plaintext = ''
     for position, character in enumerate(ciphertext):
@@ -78,14 +76,14 @@ def decrypt(ciphertext, sheet):
     return plaintext
 
 
-#startup menu (this is the UI that the user interacts with)
+# startup menu (this is the UI that the user interacts with)
 def menu():
     choices = ['1', '2', '3', '4']
     choice = '0'
-    #set the password here
-    passwd = 'hebi'
+    # set the password here
+    passwd = 'password'
     check = input('Enter password ')
-    #password verification happens here
+    # password verification happens here
     if check != passwd:
         print('Invalid password')
         quit()
@@ -93,7 +91,7 @@ def menu():
     if check == passwd:
         print('Authentication sucessful')
 
-    #UI "mainpage"
+    # UI "mainpage"
     while True:
         while choice not in choices:
             print('Welcome to Scrambler 2.1')
@@ -102,7 +100,7 @@ def menu():
             print('3. Decrypt a message')
             print('4. encrypt a file')
             print('5. exit the program')
-            #the UI "subpages"
+            # UI "subpages"
             choice = input('Type in 1, 2, 3, 4 or 5 and press Enter ')
             if choice == '1':
                 sheets = int(input('How many encyption keys would you like to generate? '))
@@ -141,4 +139,4 @@ def menu():
             choice = '0'
 
 
-menu()#trigger the menu (start the program)
+menu()  # Call the menu function (start the program)
